@@ -39,6 +39,8 @@ class MyStatelessWidget extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(builder: (context) => MyCount()),
+        ChangeNotifierProvider(builder: (context) => Area()),
+        ChangeNotifierProvider(builder: (context) => Users()),
       ],
       child: Scaffold(
         appBar: AppBar(

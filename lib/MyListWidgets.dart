@@ -16,13 +16,12 @@ class _SimpleListState extends State<SimpleList> {
 
   @override
   Widget build(BuildContext context) {
-    //var bankData = Provider.of<BankData>(context);
-    return Container();
-
-     /* ListView.builder(
-        itemCount: bankData.bankUsers.length,
+   var area = Provider.of<Area>(context);
+    return
+   ListView.builder(
+        itemCount: area.list.length,
         itemBuilder: (context, position) {
-          return  Consumer<SinglePerson>( builder: (context, value,_)=> Text("oka:  " + value.name));
-        });*/
+          return   Text("oka:  " + area.list[position].name);
+        });
   }
 }

@@ -11,7 +11,7 @@ class _ButtonForIncreaseState extends State<ButtonForIncrease> {
   @override
   Widget build(BuildContext context) {
     final myCount = Provider.of<MyCount>(context);
-    //final bankDat = Provider.of<BankData>(context);
+    final bankDat = Provider.of<Area>(context);
 
     return Row(
       children: <Widget>[
@@ -19,7 +19,8 @@ class _ButtonForIncreaseState extends State<ButtonForIncrease> {
             child: Text("add one"),
             onPressed: () {
               myCount.myCount++;
-             // bankDat.bankUsers[0].name = "rasel";
+
+              bankDat.addUser("hooo");
             }),
         RaisedButton(
           child: Text("Reset value"),
